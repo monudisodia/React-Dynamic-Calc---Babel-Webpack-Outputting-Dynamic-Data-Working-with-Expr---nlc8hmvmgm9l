@@ -1,17 +1,33 @@
-import React,{useState,useEffect} from 'react'
-import '../styles/App.css';
+import React, { useState, useEffect } from "react";
+import "../styles/App.css";
 const App = () => {
+  const [output, setOutput] = useState(0);
+  const [value1, setValue1] = useState();
+  const [value2, setValue2] = useState();
+
+  useEffect(() => {
+    setOutput(Number(value1) + Number(value2));
+  }, [value1, value2]);
 
   return (
     <div id="main">
-      <input id='input1' onChange={}/>
-       +
-      <input id='input2' onChange={}/> 
-      
-      <p id='result'></p>
+      <input
+        id="input1"
+        type="number"
+        value={value1}
+        onChange={(e) => setValue1(e.target.value)}
+      />
+      +
+      <input
+        id="input2"
+        type="number"
+        value={value2}
+        onChange={(e) => setValue2(e.target.value)}
+      />
+      <p>{output}</p>
+      <p id="result"></p>
     </div>
-  )
-}
-
+  );
+};
 
 export default App;
