@@ -24,8 +24,7 @@ const App = () => {
         value={value2}
         onChange={(e) => setValue2(e.target.value)}
       />
-      <p>{output}</p>
-      <p id="result"></p>
+      <p id="result">{output}</p>
     </div>
   );
 };
