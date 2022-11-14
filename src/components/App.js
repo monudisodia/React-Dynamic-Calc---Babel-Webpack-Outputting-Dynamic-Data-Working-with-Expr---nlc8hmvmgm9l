@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "../styles/App.css";
 const App = () => {
   const [output, setOutput] = useState(0);
-  const [value1, setValue1] = useState();
-  const [value2, setValue2] = useState();
+  const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(0);
 
   useEffect(() => {
     setOutput(Number(value1) + Number(value2));
